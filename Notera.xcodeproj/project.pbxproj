@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0F390EE1C5C6864000D53B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F390ED1C5C6864000D53B6 /* AppDelegate.swift */; };
+		B0F390F01C5C6864000D53B6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F390EF1C5C6864000D53B6 /* FirstViewController.swift */; };
+		B0F390F21C5C6864000D53B6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F390F11C5C6864000D53B6 /* SecondViewController.swift */; };
+		B0F390F51C5C6864000D53B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0F390F31C5C6864000D53B6 /* Main.storyboard */; };
+		B0F390F71C5C6864000D53B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F390F61C5C6864000D53B6 /* Assets.xcassets */; };
+		B0F390FA1C5C6864000D53B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0F390F81C5C6864000D53B6 /* LaunchScreen.storyboard */; };
+		B0F391051C5C6864000D53B6 /* NoteraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F391041C5C6864000D53B6 /* NoteraTests.swift */; };
+		B0F391101C5C6864000D53B6 /* NoteraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3910F1C5C6864000D53B6 /* NoteraUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0F391011C5C6864000D53B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0F390E21C5C6864000D53B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0F390E91C5C6864000D53B6;
+			remoteInfo = Notera;
+		};
+		B0F3910C1C5C6864000D53B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0F390E21C5C6864000D53B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0F390E91C5C6864000D53B6;
+			remoteInfo = Notera;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B0F390EA1C5C6864000D53B6 /* Notera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0F390ED1C5C6864000D53B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B0F390EF1C5C6864000D53B6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		B0F390F11C5C6864000D53B6 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B0F390F41C5C6864000D53B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0F390F61C5C6864000D53B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0F390F91C5C6864000D53B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B0F390FB1C5C6864000D53B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0F391001C5C6864000D53B6 /* NoteraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoteraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0F391041C5C6864000D53B6 /* NoteraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteraTests.swift; sourceTree = "<group>"; };
+		B0F391061C5C6864000D53B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0F3910B1C5C6864000D53B6 /* NoteraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoteraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0F3910F1C5C6864000D53B6 /* NoteraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteraUITests.swift; sourceTree = "<group>"; };
+		B0F391111C5C6864000D53B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0F390E71C5C6864000D53B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F390FD1C5C6864000D53B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F391081C5C6864000D53B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0F390E11C5C6864000D53B6 = {
+			isa = PBXGroup;
+			children = (
+				B0F390EC1C5C6864000D53B6 /* Notera */,
+				B0F391031C5C6864000D53B6 /* NoteraTests */,
+				B0F3910E1C5C6864000D53B6 /* NoteraUITests */,
+				B0F390EB1C5C6864000D53B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B0F390EB1C5C6864000D53B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0F390EA1C5C6864000D53B6 /* Notera.app */,
+				B0F391001C5C6864000D53B6 /* NoteraTests.xctest */,
+				B0F3910B1C5C6864000D53B6 /* NoteraUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0F390EC1C5C6864000D53B6 /* Notera */ = {
+			isa = PBXGroup;
+			children = (
+				B0F390ED1C5C6864000D53B6 /* AppDelegate.swift */,
+				B0F390EF1C5C6864000D53B6 /* FirstViewController.swift */,
+				B0F390F11C5C6864000D53B6 /* SecondViewController.swift */,
+				B0F390F31C5C6864000D53B6 /* Main.storyboard */,
+				B0F390F61C5C6864000D53B6 /* Assets.xcassets */,
+				B0F390F81C5C6864000D53B6 /* LaunchScreen.storyboard */,
+				B0F390FB1C5C6864000D53B6 /* Info.plist */,
+			);
+			path = Notera;
+			sourceTree = "<group>";
+		};
+		B0F391031C5C6864000D53B6 /* NoteraTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0F391041C5C6864000D53B6 /* NoteraTests.swift */,
+				B0F391061C5C6864000D53B6 /* Info.plist */,
+			);
+			path = NoteraTests;
+			sourceTree = "<group>";
+		};
+		B0F3910E1C5C6864000D53B6 /* NoteraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B0F3910F1C5C6864000D53B6 /* NoteraUITests.swift */,
+				B0F391111C5C6864000D53B6 /* Info.plist */,
+			);
+			path = NoteraUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0F390E91C5C6864000D53B6 /* Notera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0F391141C5C6864000D53B6 /* Build configuration list for PBXNativeTarget "Notera" */;
+			buildPhases = (
+				B0F390E61C5C6864000D53B6 /* Sources */,
+				B0F390E71C5C6864000D53B6 /* Frameworks */,
+				B0F390E81C5C6864000D53B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Notera;
+			productName = Notera;
+			productReference = B0F390EA1C5C6864000D53B6 /* Notera.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0F390FF1C5C6864000D53B6 /* NoteraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0F391171C5C6864000D53B6 /* Build configuration list for PBXNativeTarget "NoteraTests" */;
+			buildPhases = (
+				B0F390FC1C5C6864000D53B6 /* Sources */,
+				B0F390FD1C5C6864000D53B6 /* Frameworks */,
+				B0F390FE1C5C6864000D53B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0F391021C5C6864000D53B6 /* PBXTargetDependency */,
+			);
+			name = NoteraTests;
+			productName = NoteraTests;
+			productReference = B0F391001C5C6864000D53B6 /* NoteraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B0F3910A1C5C6864000D53B6 /* NoteraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0F3911A1C5C6864000D53B6 /* Build configuration list for PBXNativeTarget "NoteraUITests" */;
+			buildPhases = (
+				B0F391071C5C6864000D53B6 /* Sources */,
+				B0F391081C5C6864000D53B6 /* Frameworks */,
+				B0F391091C5C6864000D53B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0F3910D1C5C6864000D53B6 /* PBXTargetDependency */,
+			);
+			name = NoteraUITests;
+			productName = NoteraUITests;
+			productReference = B0F3910B1C5C6864000D53B6 /* NoteraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0F390E21C5C6864000D53B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Notera;
+				TargetAttributes = {
+					B0F390E91C5C6864000D53B6 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					B0F390FF1C5C6864000D53B6 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = B0F390E91C5C6864000D53B6;
+					};
+					B0F3910A1C5C6864000D53B6 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = B0F390E91C5C6864000D53B6;
+					};
+				};
+			};
+			buildConfigurationList = B0F390E51C5C6864000D53B6 /* Build configuration list for PBXProject "Notera" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0F390E11C5C6864000D53B6;
+			productRefGroup = B0F390EB1C5C6864000D53B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0F390E91C5C6864000D53B6 /* Notera */,
+				B0F390FF1C5C6864000D53B6 /* NoteraTests */,
+				B0F3910A1C5C6864000D53B6 /* NoteraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0F390E81C5C6864000D53B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0F390FA1C5C6864000D53B6 /* LaunchScreen.storyboard in Resources */,
+				B0F390F71C5C6864000D53B6 /* Assets.xcassets in Resources */,
+				B0F390F51C5C6864000D53B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F390FE1C5C6864000D53B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F391091C5C6864000D53B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0F390E61C5C6864000D53B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0F390F21C5C6864000D53B6 /* SecondViewController.swift in Sources */,
+				B0F390EE1C5C6864000D53B6 /* AppDelegate.swift in Sources */,
+				B0F390F01C5C6864000D53B6 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F390FC1C5C6864000D53B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0F391051C5C6864000D53B6 /* NoteraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F391071C5C6864000D53B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0F391101C5C6864000D53B6 /* NoteraUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0F391021C5C6864000D53B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0F390E91C5C6864000D53B6 /* Notera */;
+			targetProxy = B0F391011C5C6864000D53B6 /* PBXContainerItemProxy */;
+		};
+		B0F3910D1C5C6864000D53B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0F390E91C5C6864000D53B6 /* Notera */;
+			targetProxy = B0F3910C1C5C6864000D53B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B0F390F31C5C6864000D53B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0F390F41C5C6864000D53B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B0F390F81C5C6864000D53B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0F390F91C5C6864000D53B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0F391121C5C6864000D53B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0F391131C5C6864000D53B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0F391151C5C6864000D53B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Notera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.notera.Notera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0F391161C5C6864000D53B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Notera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.notera.Notera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B0F391181C5C6864000D53B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NoteraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.notera.NoteraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Notera.app/Notera";
+			};
+			name = Debug;
+		};
+		B0F391191C5C6864000D53B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NoteraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.notera.NoteraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Notera.app/Notera";
+			};
+			name = Release;
+		};
+		B0F3911B1C5C6864000D53B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NoteraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.notera.NoteraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Notera;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B0F3911C1C5C6864000D53B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NoteraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.notera.NoteraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Notera;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0F390E51C5C6864000D53B6 /* Build configuration list for PBXProject "Notera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0F391121C5C6864000D53B6 /* Debug */,
+				B0F391131C5C6864000D53B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0F391141C5C6864000D53B6 /* Build configuration list for PBXNativeTarget "Notera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0F391151C5C6864000D53B6 /* Debug */,
+				B0F391161C5C6864000D53B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0F391171C5C6864000D53B6 /* Build configuration list for PBXNativeTarget "NoteraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0F391181C5C6864000D53B6 /* Debug */,
+				B0F391191C5C6864000D53B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0F3911A1C5C6864000D53B6 /* Build configuration list for PBXNativeTarget "NoteraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0F3911B1C5C6864000D53B6 /* Debug */,
+				B0F3911C1C5C6864000D53B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0F390E21C5C6864000D53B6 /* Project object */;
+}
