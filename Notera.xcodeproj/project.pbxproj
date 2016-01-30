@@ -13,6 +13,7 @@
 		B080D22C1C5D5A7400055AD5 /* PostsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D22B1C5D5A7400055AD5 /* PostsManager.swift */; };
 		B080D22F1C5D5DDB00055AD5 /* FeedPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D22E1C5D5DDB00055AD5 /* FeedPostView.swift */; };
 		B080D2311C5D60BC00055AD5 /* FeedPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D2301C5D60BC00055AD5 /* FeedPostTableViewCell.swift */; };
+		B080D2331C5D684D00055AD5 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D2321C5D684D00055AD5 /* Course.swift */; };
 		B0F390EE1C5C6864000D53B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F390ED1C5C6864000D53B6 /* AppDelegate.swift */; };
 		B0F390F01C5C6864000D53B6 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F390EF1C5C6864000D53B6 /* FeedViewController.swift */; };
 		B0F390F21C5C6864000D53B6 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F390F11C5C6864000D53B6 /* CoursesViewController.swift */; };
@@ -47,6 +48,7 @@
 		B080D22B1C5D5A7400055AD5 /* PostsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsManager.swift; sourceTree = "<group>"; };
 		B080D22E1C5D5DDB00055AD5 /* FeedPostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPostView.swift; sourceTree = "<group>"; };
 		B080D2301C5D60BC00055AD5 /* FeedPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPostTableViewCell.swift; sourceTree = "<group>"; };
+		B080D2321C5D684D00055AD5 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		B0F390EA1C5C6864000D53B6 /* Notera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F390ED1C5C6864000D53B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0F390EF1C5C6864000D53B6 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				B080D2271C5D50D100055AD5 /* Post.swift */,
 				B080D2291C5D512E00055AD5 /* User.swift */,
+				B080D2321C5D684D00055AD5 /* Course.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			files = (
 				B006D6811C5C7A5B003AE1FB /* ClassmatesViewController.swift in Sources */,
 				B0F390F21C5C6864000D53B6 /* CoursesViewController.swift in Sources */,
+				B080D2331C5D684D00055AD5 /* Course.swift in Sources */,
 				B080D22A1C5D512E00055AD5 /* User.swift in Sources */,
 				B080D2311C5D60BC00055AD5 /* FeedPostTableViewCell.swift in Sources */,
 				B080D22F1C5D5DDB00055AD5 /* FeedPostView.swift in Sources */,
