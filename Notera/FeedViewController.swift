@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  ClassmatesViewController.swift
 //  Notera
 //
 //  Created by Steven Mirabito on 1/29/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
