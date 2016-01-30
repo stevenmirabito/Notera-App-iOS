@@ -9,11 +9,6 @@
 import UIKit
 
 class CoursesViewController: UITableViewController {
-
-    @IBOutlet var postText: UILabel!
-    @IBOutlet var postAttributes: UILabel!
-    @IBOutlet var userCommonName: UILabel!
-    @IBOutlet var userProfileImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
