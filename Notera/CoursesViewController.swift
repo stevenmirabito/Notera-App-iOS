@@ -8,8 +8,13 @@
 
 import UIKit
 
-class CoursesViewController: UIViewController {
+class CoursesViewController: UITableViewController {
 
+    @IBOutlet var postText: UILabel!
+    @IBOutlet var postAttributes: UILabel!
+    @IBOutlet var userCommonName: UILabel!
+    @IBOutlet var userProfileImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
