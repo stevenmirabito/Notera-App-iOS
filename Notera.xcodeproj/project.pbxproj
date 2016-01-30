@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B006D6811C5C7A5B003AE1FB /* ClassmatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006D6801C5C7A5B003AE1FB /* ClassmatesViewController.swift */; };
+		B080D2281C5D50D100055AD5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D2271C5D50D100055AD5 /* Post.swift */; };
+		B080D22A1C5D512E00055AD5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D2291C5D512E00055AD5 /* User.swift */; };
+		B080D22C1C5D5A7400055AD5 /* PostsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D22B1C5D5A7400055AD5 /* PostsManager.swift */; };
+		B080D22F1C5D5DDB00055AD5 /* FeedPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D22E1C5D5DDB00055AD5 /* FeedPostView.swift */; };
+		B080D2311C5D60BC00055AD5 /* FeedPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D2301C5D60BC00055AD5 /* FeedPostTableViewCell.swift */; };
 		B0F390EE1C5C6864000D53B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F390ED1C5C6864000D53B6 /* AppDelegate.swift */; };
 		B0F390F01C5C6864000D53B6 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F390EF1C5C6864000D53B6 /* FeedViewController.swift */; };
 		B0F390F21C5C6864000D53B6 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F390F11C5C6864000D53B6 /* CoursesViewController.swift */; };
@@ -37,6 +42,11 @@
 
 /* Begin PBXFileReference section */
 		B006D6801C5C7A5B003AE1FB /* ClassmatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassmatesViewController.swift; sourceTree = "<group>"; };
+		B080D2271C5D50D100055AD5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		B080D2291C5D512E00055AD5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B080D22B1C5D5A7400055AD5 /* PostsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsManager.swift; sourceTree = "<group>"; };
+		B080D22E1C5D5DDB00055AD5 /* FeedPostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPostView.swift; sourceTree = "<group>"; };
+		B080D2301C5D60BC00055AD5 /* FeedPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPostTableViewCell.swift; sourceTree = "<group>"; };
 		B0F390EA1C5C6864000D53B6 /* Notera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F390ED1C5C6864000D53B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0F390EF1C5C6864000D53B6 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -78,12 +88,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B080D2261C5D508600055AD5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B080D2271C5D50D100055AD5 /* Post.swift */,
+				B080D2291C5D512E00055AD5 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B080D22D1C5D5A7E00055AD5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B080D22B1C5D5A7400055AD5 /* PostsManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
 		B0BBAEC61C5C7BA5002423A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				B006D6801C5C7A5B003AE1FB /* ClassmatesViewController.swift */,
 				B0F390F11C5C6864000D53B6 /* CoursesViewController.swift */,
 				B0F390EF1C5C6864000D53B6 /* FeedViewController.swift */,
+				B080D22E1C5D5DDB00055AD5 /* FeedPostView.swift */,
+				B080D2301C5D60BC00055AD5 /* FeedPostTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -120,8 +149,10 @@
 		B0F390EC1C5C6864000D53B6 /* Notera */ = {
 			isa = PBXGroup;
 			children = (
-				B0BBAEC71C5C7BBA002423A2 /* Storyboards */,
 				B0BBAEC61C5C7BA5002423A2 /* Views */,
+				B0BBAEC71C5C7BBA002423A2 /* Storyboards */,
+				B080D2261C5D508600055AD5 /* Models */,
+				B080D22D1C5D5A7E00055AD5 /* Managers */,
 				B0F390ED1C5C6864000D53B6 /* AppDelegate.swift */,
 				B0F390F61C5C6864000D53B6 /* Assets.xcassets */,
 				B0F390FB1C5C6864000D53B6 /* Info.plist */,
@@ -280,8 +311,13 @@
 			files = (
 				B006D6811C5C7A5B003AE1FB /* ClassmatesViewController.swift in Sources */,
 				B0F390F21C5C6864000D53B6 /* CoursesViewController.swift in Sources */,
+				B080D22A1C5D512E00055AD5 /* User.swift in Sources */,
+				B080D2311C5D60BC00055AD5 /* FeedPostTableViewCell.swift in Sources */,
+				B080D22F1C5D5DDB00055AD5 /* FeedPostView.swift in Sources */,
 				B0F390EE1C5C6864000D53B6 /* AppDelegate.swift in Sources */,
 				B0F390F01C5C6864000D53B6 /* FeedViewController.swift in Sources */,
+				B080D22C1C5D5A7400055AD5 /* PostsManager.swift in Sources */,
+				B080D2281C5D50D100055AD5 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
