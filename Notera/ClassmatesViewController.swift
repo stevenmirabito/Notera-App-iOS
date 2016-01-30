@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ClassmatesViewController: UIViewController {
+class ClassmatesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
