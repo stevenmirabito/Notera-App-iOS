@@ -14,7 +14,7 @@ class PostsManager {
     class func archivePath() -> String? {
         let directoryList = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         if let documentsPath = directoryList.first {
-            return documentsPath + "/Notera"
+            return documentsPath + "/Notera/Posts"
         }
         assertionFailure("Could not determine where to save file!")
         return nil
