@@ -21,7 +21,7 @@ class ClassmatesManager {
     }
     
     func save() {
-        if let theArchivePath = PostsManager.archivePath() {
+        if let theArchivePath = ClassmatesManager.archivePath() {
             if NSKeyedArchiver.archiveRootObject(classmates, toFile: theArchivePath) {
                 print("Saved successfully.")
             } else {
@@ -31,7 +31,7 @@ class ClassmatesManager {
     }
     
     func unarchiveSavedItems() {
-        if let theArchivePath = PostsManager.archivePath() {
+        if let theArchivePath = ClassmatesManager.archivePath() {
             if NSFileManager.defaultManager().fileExistsAtPath(theArchivePath) {
                 classmates = NSKeyedUnarchiver.unarchiveObjectWithFile(theArchivePath) as! [User]
             } else {

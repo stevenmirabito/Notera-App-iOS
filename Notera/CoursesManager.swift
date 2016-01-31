@@ -21,7 +21,7 @@ class CoursesManager {
     }
     
     func save() {
-        if let theArchivePath = PostsManager.archivePath() {
+        if let theArchivePath = CoursesManager.archivePath() {
             if NSKeyedArchiver.archiveRootObject(courses, toFile: theArchivePath) {
                 print("Saved successfully.")
             } else {
@@ -31,7 +31,7 @@ class CoursesManager {
     }
     
     func unarchiveSavedItems() {
-        if let theArchivePath = PostsManager.archivePath() {
+        if let theArchivePath = CoursesManager.archivePath() {
             if NSFileManager.defaultManager().fileExistsAtPath(theArchivePath) {
                 courses = NSKeyedUnarchiver.unarchiveObjectWithFile(theArchivePath) as! [Course]
             } else {
