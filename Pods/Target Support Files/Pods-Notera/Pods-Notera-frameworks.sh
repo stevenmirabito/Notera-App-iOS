@@ -84,8 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Notera/Alamofire.framework"
+  install_framework "Pods-Notera/Haneke.framework"
   install_framework "Pods-Notera/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Notera/Alamofire.framework"
+  install_framework "Pods-Notera/Haneke.framework"
   install_framework "Pods-Notera/SwiftyJSON.framework"
 fi
