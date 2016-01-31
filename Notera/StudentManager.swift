@@ -33,14 +33,6 @@ class StudentManager {
         }
     }
     
-    func getStudentById(studentId: Int) -> Student? {
-        if let index = classmates.indexOf({$0.id == studentId}) {
-            return classmates[index]
-        } else {
-            return nil
-        }
-    }
-    
     init() {
         self.delegate = nil
         getClassmates()
