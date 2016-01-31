@@ -18,7 +18,7 @@ class CoursesTableViewCell: UITableViewCell {
         didSet {
             courseName.text = course.name
             courseProfessor.text = course.professor
-            courseImage.image = UIImage(named: "default-profile-picture")
+            courseImage.image = UIImage(named: "default-course-icon")
         }
     }
 
