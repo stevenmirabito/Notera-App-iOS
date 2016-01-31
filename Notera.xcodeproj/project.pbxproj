@@ -11,6 +11,11 @@
 		B05658F01C5D8BED0001C5E0 /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05658EF1C5D8BED0001C5E0 /* CoursesTableViewCell.swift */; };
 		B05658F21C5DA17C0001C5E0 /* ClassmatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05658F11C5DA17C0001C5E0 /* ClassmatesTableViewCell.swift */; };
 		B05658F61C5DA6130001C5E0 /* ClassmatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05658F51C5DA6130001C5E0 /* ClassmatesManager.swift */; };
+		B05658FC1C5DC8A90001C5E0 /* JoinCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05658FB1C5DC8A90001C5E0 /* JoinCourseViewController.swift */; };
+		B05658FE1C5DCA600001C5E0 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05658FD1C5DCA600001C5E0 /* School.swift */; };
+		B05659001C5DCB360001C5E0 /* SchoolManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05658FF1C5DCB360001C5E0 /* SchoolManager.swift */; };
+		B05659021C5DCE270001C5E0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05659011C5DCE270001C5E0 /* SearchViewController.swift */; };
+		B05659051C5DD6540001C5E0 /* SearchReturnDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05659041C5DD6540001C5E0 /* SearchReturnDelegate.swift */; };
 		B080D2281C5D50D100055AD5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D2271C5D50D100055AD5 /* Post.swift */; };
 		B080D22A1C5D512E00055AD5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D2291C5D512E00055AD5 /* User.swift */; };
 		B080D22C1C5D5A7400055AD5 /* PostsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D22B1C5D5A7400055AD5 /* PostsManager.swift */; };
@@ -50,6 +55,11 @@
 		B05658EF1C5D8BED0001C5E0 /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
 		B05658F11C5DA17C0001C5E0 /* ClassmatesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassmatesTableViewCell.swift; sourceTree = "<group>"; };
 		B05658F51C5DA6130001C5E0 /* ClassmatesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassmatesManager.swift; sourceTree = "<group>"; };
+		B05658FB1C5DC8A90001C5E0 /* JoinCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinCourseViewController.swift; sourceTree = "<group>"; };
+		B05658FD1C5DCA600001C5E0 /* School.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		B05658FF1C5DCB360001C5E0 /* SchoolManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolManager.swift; sourceTree = "<group>"; };
+		B05659011C5DCE270001C5E0 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B05659041C5DD6540001C5E0 /* SearchReturnDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchReturnDelegate.swift; sourceTree = "<group>"; };
 		B080D2271C5D50D100055AD5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B080D2291C5D512E00055AD5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B080D22B1C5D5A7400055AD5 /* PostsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsManager.swift; sourceTree = "<group>"; };
@@ -110,6 +120,7 @@
 		B05658F81C5DAA800001C5E0 /* CoursesView */ = {
 			isa = PBXGroup;
 			children = (
+				B05658FA1C5DC88A0001C5E0 /* JoinCourseView */,
 				B0F390F11C5C6864000D53B6 /* CoursesViewController.swift */,
 				B05658EF1C5D8BED0001C5E0 /* CoursesTableViewCell.swift */,
 			);
@@ -126,12 +137,29 @@
 			name = FeedView;
 			sourceTree = "<group>";
 		};
+		B05658FA1C5DC88A0001C5E0 /* JoinCourseView */ = {
+			isa = PBXGroup;
+			children = (
+				B05658FB1C5DC8A90001C5E0 /* JoinCourseViewController.swift */,
+			);
+			name = JoinCourseView;
+			sourceTree = "<group>";
+		};
+		B05659031C5DD5A20001C5E0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B05659041C5DD6540001C5E0 /* SearchReturnDelegate.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		B080D2261C5D508600055AD5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				B080D2271C5D50D100055AD5 /* Post.swift */,
 				B080D2291C5D512E00055AD5 /* User.swift */,
 				B080D2321C5D684D00055AD5 /* Course.swift */,
+				B05658FD1C5DCA600001C5E0 /* School.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -142,6 +170,7 @@
 				B080D22B1C5D5A7400055AD5 /* PostsManager.swift */,
 				B080D2341C5D7EEA00055AD5 /* CoursesManager.swift */,
 				B05658F51C5DA6130001C5E0 /* ClassmatesManager.swift */,
+				B05658FF1C5DCB360001C5E0 /* SchoolManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -152,6 +181,7 @@
 				B05658F91C5DAA930001C5E0 /* FeedView */,
 				B05658F81C5DAA800001C5E0 /* CoursesView */,
 				B05658F71C5DAA590001C5E0 /* ClassmatesView */,
+				B05659011C5DCE270001C5E0 /* SearchViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -188,6 +218,7 @@
 		B0F390EC1C5C6864000D53B6 /* Notera */ = {
 			isa = PBXGroup;
 			children = (
+				B05659031C5DD5A20001C5E0 /* Protocols */,
 				B0BBAEC61C5C7BA5002423A2 /* Views */,
 				B0BBAEC71C5C7BBA002423A2 /* Storyboards */,
 				B080D2261C5D508600055AD5 /* Models */,
@@ -348,8 +379,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B05658FC1C5DC8A90001C5E0 /* JoinCourseViewController.swift in Sources */,
 				B05658F01C5D8BED0001C5E0 /* CoursesTableViewCell.swift in Sources */,
 				B05658F21C5DA17C0001C5E0 /* ClassmatesTableViewCell.swift in Sources */,
+				B05659051C5DD6540001C5E0 /* SearchReturnDelegate.swift in Sources */,
 				B006D6811C5C7A5B003AE1FB /* ClassmatesViewController.swift in Sources */,
 				B0F390F21C5C6864000D53B6 /* CoursesViewController.swift in Sources */,
 				B080D2331C5D684D00055AD5 /* Course.swift in Sources */,
@@ -359,9 +392,12 @@
 				B080D2351C5D7EEA00055AD5 /* CoursesManager.swift in Sources */,
 				B080D22F1C5D5DDB00055AD5 /* FeedPostView.swift in Sources */,
 				B0F390EE1C5C6864000D53B6 /* AppDelegate.swift in Sources */,
+				B05659021C5DCE270001C5E0 /* SearchViewController.swift in Sources */,
 				B0F390F01C5C6864000D53B6 /* FeedViewController.swift in Sources */,
 				B080D22C1C5D5A7400055AD5 /* PostsManager.swift in Sources */,
 				B080D2281C5D50D100055AD5 /* Post.swift in Sources */,
+				B05659001C5DCB360001C5E0 /* SchoolManager.swift in Sources */,
+				B05658FE1C5DCA600001C5E0 /* School.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
