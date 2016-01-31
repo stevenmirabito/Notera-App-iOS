@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		775E72CD413F63728E7D48F1 /* Pods_Notera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F82BED5404E7B681CD4542 /* Pods_Notera.framework */; };
 		B006D6811C5C7A5B003AE1FB /* ClassmatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006D6801C5C7A5B003AE1FB /* ClassmatesViewController.swift */; };
 		B05658F01C5D8BED0001C5E0 /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05658EF1C5D8BED0001C5E0 /* CoursesTableViewCell.swift */; };
 		B05658F21C5DA17C0001C5E0 /* ClassmatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05658F11C5DA17C0001C5E0 /* ClassmatesTableViewCell.swift */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04F82BED5404E7B681CD4542 /* Pods_Notera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Notera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E7622ACB5C4C57168ED84C3 /* Pods-Notera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Notera/Pods-Notera.debug.xcconfig"; sourceTree = "<group>"; };
 		B006D6801C5C7A5B003AE1FB /* ClassmatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassmatesViewController.swift; sourceTree = "<group>"; };
 		B05658EF1C5D8BED0001C5E0 /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
 		B05658F11C5DA17C0001C5E0 /* ClassmatesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassmatesTableViewCell.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		B0F3910B1C5C6864000D53B6 /* NoteraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoteraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F3910F1C5C6864000D53B6 /* NoteraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteraUITests.swift; sourceTree = "<group>"; };
 		B0F391111C5C6864000D53B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8E66A5C27636C46470E47FF /* Pods-Notera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notera.release.xcconfig"; path = "Pods/Target Support Files/Pods-Notera/Pods-Notera.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775E72CD413F63728E7D48F1 /* Pods_Notera.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +113,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62200B9F3B60B9FE45F5DE45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E7622ACB5C4C57168ED84C3 /* Pods-Notera.debug.xcconfig */,
+				C8E66A5C27636C46470E47FF /* Pods-Notera.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A3F097C492A175E7ECABC051 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04F82BED5404E7B681CD4542 /* Pods_Notera.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B05658F71C5DAA590001C5E0 /* ClassmatesView */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +224,8 @@
 				B0F391031C5C6864000D53B6 /* NoteraTests */,
 				B0F3910E1C5C6864000D53B6 /* NoteraUITests */,
 				B0F390EB1C5C6864000D53B6 /* Products */,
+				62200B9F3B60B9FE45F5DE45 /* Pods */,
+				A3F097C492A175E7ECABC051 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,9 +279,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0F391141C5C6864000D53B6 /* Build configuration list for PBXNativeTarget "Notera" */;
 			buildPhases = (
+				FAEB5BD8179A0F505BE54925 /* Check Pods Manifest.lock */,
 				B0F390E61C5C6864000D53B6 /* Sources */,
 				B0F390E71C5C6864000D53B6 /* Frameworks */,
 				B0F390E81C5C6864000D53B6 /* Resources */,
+				62E5CF7BF200F500C5401B35 /* Embed Pods Frameworks */,
+				72B502027D4C3E78AA30621C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -373,6 +400,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62E5CF7BF200F500C5401B35 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Notera/Pods-Notera-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72B502027D4C3E78AA30621C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Notera/Pods-Notera-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAEB5BD8179A0F505BE54925 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B0F390E61C5C6864000D53B6 /* Sources */ = {
@@ -537,6 +612,7 @@
 		};
 		B0F391151C5C6864000D53B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E7622ACB5C4C57168ED84C3 /* Pods-Notera.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -551,6 +627,7 @@
 		};
 		B0F391161C5C6864000D53B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8E66A5C27636C46470E47FF /* Pods-Notera.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
