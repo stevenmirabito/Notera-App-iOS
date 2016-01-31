@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Haneke
 
 class FeedPostView: UIView {
     
@@ -17,15 +18,15 @@ class FeedPostView: UIView {
     
     private let dateFormatter = NSDateFormatter()
     
-    var post: Post! {
+    var note: Note! {
         didSet {
             dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
             dateFormatter.timeStyle = .ShortStyle
             
-            userProfilePicture.image = post.user.profilePicture
-            userCommonName.text = post.user.commonName
-            postingTime.text = dateFormatter.stringFromDate(post.timestamp)
-            postText.text = post.postText
+            userProfilePicture.hnk_setImageFromURL(NSURL(string: note.author.gravatarUrl)!)
+            userCommonName.text = note.author.realName
+            postingTime.text = dateFormatter.stringFromDate(note.timestamp)
+            postText.text = note.body
         }
     }
 

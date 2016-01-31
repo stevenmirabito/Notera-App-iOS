@@ -8,18 +8,26 @@
 
 import UIKit
 
-class FeedViewController: UITableViewController {
-    
-    let postsManager = PostsManager()
+class FeedViewController: UITableViewController, AsyncRequestDelegate {
+
+    let feedManager = FeedManager()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return postsManager.posts.count
+        return feedManager.notes.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FeedItem", forIndexPath: indexPath) as! FeedPostTableViewCell
-        cell.feedPostView.post = postsManager.posts[indexPath.row]
+
+        let note = feedManager.notes[indexPath.row]
+        cell.feedPostView.note = note
+        
         return cell
+    }
+    
+    func dataLoadedCallback() {
+        print("got the callback!")
+        self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
     }
 
     override func viewDidLoad() {
@@ -27,6 +35,7 @@ class FeedViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
         tableView.estimatedRowHeight = 150.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        self.feedManager.delegate = self
     }
     
     override func didReceiveMemoryWarning() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Haneke
 
 class ClassmatesTableViewCell: UITableViewCell {
     
@@ -14,9 +15,10 @@ class ClassmatesTableViewCell: UITableViewCell {
     @IBOutlet var classmateCourses: UILabel!
     @IBOutlet var classmateProfilePicture: UIImageView!
     
-    var user: User! {
+    var student: Student! {
         didSet {
-            classmateName.text = user.commonName
+            classmateName.text = student.realName
+            /*
             if let courses = user.courses {
                 var courseNames = [String]()
                 for course in courses {
@@ -24,10 +26,10 @@ class ClassmatesTableViewCell: UITableViewCell {
                 }
                 
                 classmateCourses.text = courseNames.joinWithSeparator(",")
-            } else {
+            } else { */
                 classmateCourses.text = "No courses in common."
-            }
-            classmateProfilePicture.image = user.profilePicture
+            /* } */
+            classmateProfilePicture.hnk_setImageFromURL(NSURL(string: student.gravatarUrl)!)
         }
     }
     

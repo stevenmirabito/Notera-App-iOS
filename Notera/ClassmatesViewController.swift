@@ -10,15 +10,15 @@ import UIKit
 
 class ClassmatesViewController: UITableViewController {
 
-    let classmatesManager = ClassmatesManager()
+    let studentManager = StudentManager()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return classmatesManager.classmates.count
+        return studentManager.classmates.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ClassmateRow", forIndexPath: indexPath) as! ClassmatesTableViewCell
-        cell.user = classmatesManager.classmates[indexPath.row]
+        cell.student = studentManager.classmates[indexPath.row]
         return cell
     }
     

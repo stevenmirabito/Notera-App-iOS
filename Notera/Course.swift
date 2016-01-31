@@ -12,7 +12,7 @@ class Course: NSObject, NSCoding {
     
     let name: String
     let professor: String
-    let posts: [Post]?
+    let posts: [Note]?
     
     private let nameKey = "name"
     private let professorKey = "professor"
@@ -27,7 +27,7 @@ class Course: NSObject, NSCoding {
     required init?(coder aDecoder: NSCoder) {
         name = aDecoder.decodeObjectForKey(nameKey) as! String
         professor = aDecoder.decodeObjectForKey(professorKey) as! String
-        posts = aDecoder.decodeObjectForKey(postsKey) as? [Post]
+        posts = aDecoder.decodeObjectForKey(postsKey) as? [Note]
     }
     
     init(name: String, professor: String) {
