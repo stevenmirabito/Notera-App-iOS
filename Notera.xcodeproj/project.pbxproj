@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B006D6811C5C7A5B003AE1FB /* ClassmatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006D6801C5C7A5B003AE1FB /* ClassmatesViewController.swift */; };
 		B05658F01C5D8BED0001C5E0 /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05658EF1C5D8BED0001C5E0 /* CoursesTableViewCell.swift */; };
+		B05658F21C5DA17C0001C5E0 /* ClassmatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05658F11C5DA17C0001C5E0 /* ClassmatesTableViewCell.swift */; };
+		B05658F61C5DA6130001C5E0 /* ClassmatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05658F51C5DA6130001C5E0 /* ClassmatesManager.swift */; };
 		B080D2281C5D50D100055AD5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D2271C5D50D100055AD5 /* Post.swift */; };
 		B080D22A1C5D512E00055AD5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D2291C5D512E00055AD5 /* User.swift */; };
 		B080D22C1C5D5A7400055AD5 /* PostsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D22B1C5D5A7400055AD5 /* PostsManager.swift */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		B006D6801C5C7A5B003AE1FB /* ClassmatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassmatesViewController.swift; sourceTree = "<group>"; };
 		B05658EF1C5D8BED0001C5E0 /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
+		B05658F11C5DA17C0001C5E0 /* ClassmatesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassmatesTableViewCell.swift; sourceTree = "<group>"; };
+		B05658F51C5DA6130001C5E0 /* ClassmatesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassmatesManager.swift; sourceTree = "<group>"; };
 		B080D2271C5D50D100055AD5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B080D2291C5D512E00055AD5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B080D22B1C5D5A7400055AD5 /* PostsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsManager.swift; sourceTree = "<group>"; };
@@ -94,6 +98,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B05658F71C5DAA590001C5E0 /* ClassmatesView */ = {
+			isa = PBXGroup;
+			children = (
+				B006D6801C5C7A5B003AE1FB /* ClassmatesViewController.swift */,
+				B05658F11C5DA17C0001C5E0 /* ClassmatesTableViewCell.swift */,
+			);
+			name = ClassmatesView;
+			sourceTree = "<group>";
+		};
+		B05658F81C5DAA800001C5E0 /* CoursesView */ = {
+			isa = PBXGroup;
+			children = (
+				B0F390F11C5C6864000D53B6 /* CoursesViewController.swift */,
+				B05658EF1C5D8BED0001C5E0 /* CoursesTableViewCell.swift */,
+			);
+			name = CoursesView;
+			sourceTree = "<group>";
+		};
+		B05658F91C5DAA930001C5E0 /* FeedView */ = {
+			isa = PBXGroup;
+			children = (
+				B0F390EF1C5C6864000D53B6 /* FeedViewController.swift */,
+				B080D22E1C5D5DDB00055AD5 /* FeedPostView.swift */,
+				B080D2301C5D60BC00055AD5 /* FeedPostTableViewCell.swift */,
+			);
+			name = FeedView;
+			sourceTree = "<group>";
+		};
 		B080D2261C5D508600055AD5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +141,7 @@
 			children = (
 				B080D22B1C5D5A7400055AD5 /* PostsManager.swift */,
 				B080D2341C5D7EEA00055AD5 /* CoursesManager.swift */,
+				B05658F51C5DA6130001C5E0 /* ClassmatesManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -116,12 +149,9 @@
 		B0BBAEC61C5C7BA5002423A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B006D6801C5C7A5B003AE1FB /* ClassmatesViewController.swift */,
-				B0F390F11C5C6864000D53B6 /* CoursesViewController.swift */,
-				B0F390EF1C5C6864000D53B6 /* FeedViewController.swift */,
-				B080D22E1C5D5DDB00055AD5 /* FeedPostView.swift */,
-				B080D2301C5D60BC00055AD5 /* FeedPostTableViewCell.swift */,
-				B05658EF1C5D8BED0001C5E0 /* CoursesTableViewCell.swift */,
+				B05658F91C5DAA930001C5E0 /* FeedView */,
+				B05658F81C5DAA800001C5E0 /* CoursesView */,
+				B05658F71C5DAA590001C5E0 /* ClassmatesView */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -319,9 +349,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05658F01C5D8BED0001C5E0 /* CoursesTableViewCell.swift in Sources */,
+				B05658F21C5DA17C0001C5E0 /* ClassmatesTableViewCell.swift in Sources */,
 				B006D6811C5C7A5B003AE1FB /* ClassmatesViewController.swift in Sources */,
 				B0F390F21C5C6864000D53B6 /* CoursesViewController.swift in Sources */,
 				B080D2331C5D684D00055AD5 /* Course.swift in Sources */,
+				B05658F61C5DA6130001C5E0 /* ClassmatesManager.swift in Sources */,
 				B080D22A1C5D512E00055AD5 /* User.swift in Sources */,
 				B080D2311C5D60BC00055AD5 /* FeedPostTableViewCell.swift in Sources */,
 				B080D2351C5D7EEA00055AD5 /* CoursesManager.swift in Sources */,

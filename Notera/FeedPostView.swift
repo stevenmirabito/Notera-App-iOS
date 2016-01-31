@@ -32,6 +32,11 @@ class FeedPostView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        userProfilePicture.layer.borderWidth = 1
+        userProfilePicture.layer.borderColor = UIColor.lightGrayColor().CGColor
+        userProfilePicture.layer.cornerRadius = userProfilePicture.frame.height/2
+        userProfilePicture.layer.masksToBounds = false
+        userProfilePicture.clipsToBounds = true
     }
 
 }

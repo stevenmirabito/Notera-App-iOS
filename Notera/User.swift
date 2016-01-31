@@ -14,11 +14,13 @@ class User: NSObject, NSCoding {
     let email: String
     let commonName: String
     let profilePicture: UIImage
+    let courses: [Course]?
     
     private let usernameKey = "username"
     private let emailKey = "email"
     private let commonNameKey = "commonName"
     private let profilePictureKey = "profilePicture"
+    private let coursesKey = "courses"
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(username, forKey: usernameKey)
@@ -41,6 +43,12 @@ class User: NSObject, NSCoding {
             profilePicture = UIImage.init(named: "default-profile-picture")!
         }
         
+        if aDecoder.containsValueForKey(coursesKey) {
+            courses = aDecoder.decodeObjectForKey(coursesKey) as? [Course]
+        } else {
+            courses = nil
+        }
+        
     }
     
     init(username: String, email: String, commonName: String) {
@@ -48,6 +56,7 @@ class User: NSObject, NSCoding {
         self.email = email
         self.commonName = commonName
         self.profilePicture = UIImage.init(named: "default-profile-picture")!
+        self.courses = nil
     }
     
     init(username: String) {
@@ -56,6 +65,7 @@ class User: NSObject, NSCoding {
         self.email = "not@implemented.com"
         self.commonName = "Testing Tester"
         self.profilePicture = UIImage.init(named: "default-profile-picture")!
+        self.courses = nil
     }
     
 }
