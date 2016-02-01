@@ -10,12 +10,12 @@ import UIKit
 
 class SearchViewController: UITableViewController, UISearchResultsUpdating {
     
-    var searchData: NSArray?
+    var searchData: [SearchItemWrapper]?
     var viewTitle: String?
     var delegate: SearchReturnDelegate?
     let searchController = UISearchController(searchResultsController: nil)
     
-    var filteredData = [AnyObject]()
+    var filteredData = [SearchItemWrapper]()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (searchController.active && searchController.searchBar.text != "") {
@@ -33,9 +33,9 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
         let cell = tableView.dequeueReusableCellWithIdentifier("searchItemCell", forIndexPath: indexPath)
         
         if (searchController.active && searchController.searchBar.text != "") {
-            cell.textLabel!.text = filteredData[indexPath.row].name as String
-        } else if let data = searchData {
-            cell.textLabel!.text = data[indexPath.row].name as String
+            cell.textLabel!.text = filteredData[indexPath.row].searchText
+        } else if let data = self.searchData {
+            cell.textLabel!.text = data[indexPath.row].searchText
         }
         
         return cell
@@ -47,8 +47,8 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
     }
     
     func filterContentForSearchText(searchText: String, scope: String = "All") {
-        filteredData = (searchData?.filter { AnyObject in
-            return AnyObject.name.lowercaseString.containsString(searchText.lowercaseString)
+        filteredData = (searchData?.filter { SearchItemWrapper in
+            return SearchItemWrapper.searchText.lowercaseString.containsString(searchText.lowercaseString)
         })!
         
         tableView.reloadData()

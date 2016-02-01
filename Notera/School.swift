@@ -7,28 +7,22 @@
 //
 
 import UIKit
+import SwiftyJSON
 
-class School: NSObject, NSCoding {
+class School {
     
+    let id: Int
     let name: String
-    let courses: [Course]?
     
-    private let nameKey = "name"
-    private let coursesKey = "courses"
-    
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(name, forKey: nameKey)
-        aCoder.encodeObject(courses, forKey: coursesKey)
+    convenience init(json: JSON){
+        let id = json["id"].intValue
+        let name = json["name"].stringValue
+        self.init(id: id, name: name)
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        name = aDecoder.decodeObjectForKey(nameKey) as! String
-        courses = aDecoder.decodeObjectForKey(coursesKey) as? [Course]
-    }
-    
-    init(name: String) {
+    init(id: Int, name: String) {
+        self.id = id
         self.name = name
-        self.courses = nil
     }
     
 }

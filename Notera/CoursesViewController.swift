@@ -10,7 +10,7 @@ import UIKit
 
 class CoursesViewController: UITableViewController {
 
-    let coursesManager = CoursesManager()
+    let coursesManager = CoursesManager(schoolId: nil)
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coursesManager.courses.count

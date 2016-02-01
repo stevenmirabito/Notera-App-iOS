@@ -7,45 +7,35 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class SchoolManager {
+    
+    var delegate: AsyncRequestDelegate?
     var schools = [School]()
     
-    class func archivePath() -> String? {
-        let directoryList = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-        if let documentsPath = directoryList.first {
-            return documentsPath + "/Notera/Schools"
-        }
-        assertionFailure("Could not determine where to save file!")
-        return nil
-    }
-    
-    func save() {
-        if let theArchivePath = SchoolManager.archivePath() {
-            if NSKeyedArchiver.archiveRootObject(schools, toFile: theArchivePath) {
-                print("Saved successfully.")
-            } else {
-                assertionFailure("Could not save data to \(theArchivePath)")
-            }
-        }
-    }
-    
-    func unarchiveSavedItems() {
-        if let theArchivePath = SchoolManager.archivePath() {
-            if NSFileManager.defaultManager().fileExistsAtPath(theArchivePath) {
-                schools = NSKeyedUnarchiver.unarchiveObjectWithFile(theArchivePath) as! [School]
-            } else {
-                // Demo data
-                schools = [
-                    School(name: "Rochester Institute of Technology"),
-                    School(name: "University of Rochester"),
-                    School(name: "Syracuse University")
-                ]
-            }
+    func getSchools() {
+        Alamofire.request(.GET, "https://api.notera.xyz/schools")
+            .responseJSON { response in
+                if response.result.isSuccess {
+                    if let data: AnyObject = response.result.value! {
+                        let array = JSON(data).arrayValue
+                        self.schools = array.map {
+                            School(json: $0)
+                        }
+                    }
+                }
+                
+                if let delegate = self.delegate {
+                    delegate.dataLoadedCallback()
+                }
         }
     }
     
     init() {
-        unarchiveSavedItems()
+        self.delegate = nil
+        getSchools()
     }
+    
 }

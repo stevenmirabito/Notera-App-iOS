@@ -32,10 +32,33 @@ class CoursesManager {
                 }
         }
     }
+    
+    func getCoursesForSchool(schoolId: Int) {
+        Alamofire.request(.GET, "https://api.notera.xyz/school/" + String(schoolId) + "/courses")
+            .responseJSON { response in
+                if response.result.isSuccess {
+                    if let data: AnyObject = response.result.value! {
+                        let array = JSON(data).arrayValue
+                        self.courses = array.map {
+                            Course(json: $0)
+                        }
+                    }
+                }
+                
+                if let delegate = self.delegate {
+                    delegate.dataLoadedCallback()
+                }
+        }
+    }
         
-    init() {
+    init(schoolId: Int?) {
         self.delegate = nil
-        getCoursesForUser()
+        
+        if let schoolId = schoolId {
+            getCoursesForSchool(schoolId)
+        } else {
+            getCoursesForUser()
+        }
     }
     
 }

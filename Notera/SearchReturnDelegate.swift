@@ -7,5 +7,5 @@
 //
 
 protocol SearchReturnDelegate {
-    func searchReturn(value: AnyObject?)
+    func searchReturn(value: SearchItemWrapper?)
 }

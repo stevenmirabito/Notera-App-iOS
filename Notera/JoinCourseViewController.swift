@@ -8,12 +8,13 @@
 
 import UIKit
 
-class JoinCourseViewController: UITableViewController, SearchReturnDelegate {
+class JoinCourseViewController: UITableViewController, SearchReturnDelegate, AsyncRequestDelegate {
     
     @IBOutlet var schoolTableCell: UITableViewCell!
     @IBOutlet var courseTableCell: UITableViewCell!
     
     let schoolManager = SchoolManager()
+    var coursesManager: CoursesManager?
     var selectedSchool: School?
     var selectedCourse: Course?
     
@@ -32,35 +33,55 @@ class JoinCourseViewController: UITableViewController, SearchReturnDelegate {
         
         if (indexPath.section == 0) {
             // Select school
-            searchView.searchData = schoolManager.schools
+            searchView.searchData = [SearchItemWrapper]()
+            for school in schoolManager.schools {
+                searchView.searchData?.append(SearchItemWrapper(searchText: school.name, originalObject: school))
+            }
             searchView.viewTitle = "Select School"
             searchView.delegate = self
             self.navigationController?.pushViewController(searchView, animated: true)
         } else if (indexPath.section == 1) {
             // Select course
-            if let school = selectedSchool {
-                searchView.searchData = school.courses
-                searchView.viewTitle = "Select Course"
-                searchView.delegate = self
-                self.navigationController?.pushViewController(searchView, animated: true)
+            if selectedSchool !== nil {
+                if let coursesManager = coursesManager {
+                    searchView.searchData = [SearchItemWrapper]()
+                    for course in coursesManager.courses {
+                        searchView.searchData?.append(SearchItemWrapper(searchText: course.name, originalObject: course))
+                    }
+                    searchView.viewTitle = "Select Course"
+                    searchView.delegate = self
+                    self.navigationController?.pushViewController(searchView, animated: true)
+                }
             }
         }
     }
     
-    func searchReturn(value: AnyObject?) {
-        if let school = value as? School {
+    func searchReturn(value: SearchItemWrapper?) {
+        if let school = value?.originalObject as? School {
             selectedSchool = school
             schoolTableCell.textLabel?.text = school.name
             schoolTableCell.textLabel?.textColor = UIColor.blackColor()
             
-            // Enable the course selector
-            courseTableCell.backgroundColor = UIColor.whiteColor()
-            courseTableCell.userInteractionEnabled = true
-        } else if let course = value as? Course {
+            // Reset course
+            selectedCourse = nil
+            courseTableCell.textLabel?.text = "Select a course..."
+            courseTableCell.textLabel?.textColor = UIColor.lightGrayColor()
+            courseTableCell.backgroundColor = UIColor.groupTableViewBackgroundColor()
+            courseTableCell.userInteractionEnabled = false
+            
+            coursesManager = CoursesManager(schoolId: school.id)
+            coursesManager?.delegate = self
+        } else if let course = value?.originalObject as? Course {
             selectedCourse = course
             courseTableCell.textLabel?.text = course.name
             courseTableCell.textLabel?.textColor = UIColor.blackColor()
         }
+    }
+    
+    func dataLoadedCallback() {
+        // Enable the course selector
+        courseTableCell.backgroundColor = UIColor.whiteColor()
+        courseTableCell.userInteractionEnabled = true
     }
     
     override func viewDidLoad() {
