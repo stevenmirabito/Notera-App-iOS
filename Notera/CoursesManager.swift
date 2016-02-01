@@ -7,45 +7,35 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class CoursesManager {
+        
+    var delegate: AsyncRequestDelegate?
     var courses = [Course]()
-    
-    class func archivePath() -> String? {
-        let directoryList = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-        if let documentsPath = directoryList.first {
-            return documentsPath + "/Notera/Courses"
-        }
-        assertionFailure("Could not determine where to save file!")
-        return nil
-    }
-    
-    func save() {
-        if let theArchivePath = CoursesManager.archivePath() {
-            if NSKeyedArchiver.archiveRootObject(courses, toFile: theArchivePath) {
-                print("Saved successfully.")
-            } else {
-                assertionFailure("Could not save data to \(theArchivePath)")
-            }
-        }
-    }
-    
-    func unarchiveSavedItems() {
-        if let theArchivePath = CoursesManager.archivePath() {
-            if NSFileManager.defaultManager().fileExistsAtPath(theArchivePath) {
-                courses = NSKeyedUnarchiver.unarchiveObjectWithFile(theArchivePath) as! [Course]
-            } else {
-                // Demo data
-                courses = [
-                    Course(name: "CSCI-141: Computer Science I", professor: "Scott Johnson"),
-                    Course(name: "PSYC-101: Introduction to Psychology", professor: "Jesemay Comer"),
-                    Course(name: "MATH-182: Project-based Calculus II", professor: "Patricia Clark")
-                ]
-            }
+        
+    func getCoursesForUser() {
+        Alamofire.request(.GET, "https://api.notera.xyz/courses")
+            .responseJSON { response in
+                if response.result.isSuccess {
+                    if let data: AnyObject = response.result.value! {
+                        let array = JSON(data).arrayValue
+                        self.courses = array.map {
+                            Course(json: $0)
+                        }
+                    }
+                }
+                    
+                if let delegate = self.delegate {
+                    delegate.dataLoadedCallback()
+                }
         }
     }
-    
+        
     init() {
-        unarchiveSavedItems()
+        self.delegate = nil
+        getCoursesForUser()
     }
+    
 }

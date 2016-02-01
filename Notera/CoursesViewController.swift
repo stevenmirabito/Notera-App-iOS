@@ -30,7 +30,6 @@ class CoursesViewController: UITableViewController {
         if editingStyle == .Delete {
             coursesManager.courses.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-            coursesManager.save()
         }
     }
     
