@@ -9,8 +9,21 @@
 import UIKit
 
 class CoursesViewController: UITableViewController {
-
+    
     let coursesManager = CoursesManager(schoolId: nil)
+    
+    @IBAction func cancelToCourseView(segue: UIStoryboardSegue) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func joinCourse(segue: UIStoryboardSegue) {
+        if let joinCourseViewController = segue.sourceViewController as? JoinCourseViewController,
+          selectedCourse = joinCourseViewController.selectedCourse {
+            coursesManager.courses.append(selectedCourse)
+            let indexPath = NSIndexPath(forRow: coursesManager.courses.count - 1, inSection: 0)
+            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coursesManager.courses.count
@@ -33,9 +46,20 @@ class CoursesViewController: UITableViewController {
         }
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let courseFeedView = mainStoryboard.instantiateViewControllerWithIdentifier("courseFeedView") as! CourseFeedViewController
+        let course = coursesManager.courses[indexPath.row]
+        
+        courseFeedView.courseId = course.id
+        courseFeedView.title = course.name
+        self.navigationController?.pushViewController(courseFeedView, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {

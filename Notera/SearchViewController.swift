@@ -42,7 +42,14 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        delegate?.searchReturn(searchData![indexPath.row])
+        let searchItem: SearchItemWrapper
+        if (searchController.active && searchController.searchBar.text != "") {
+            searchItem = self.filteredData[indexPath.row]
+        } else {
+            searchItem = self.searchData![indexPath.row]
+        }
+        
+        delegate?.searchReturn(searchItem)
         self.navigationController?.popViewControllerAnimated(true)
     }
     

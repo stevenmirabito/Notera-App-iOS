@@ -82,7 +82,8 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6nd-L7-j34">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="sv7-Qe-UFQ" kind="presentation" id="W6l-VJ-y0j"/>
+                                <action selector="addCourseBarButton:" destination="LLB-Pa-lde" id="MR8-RF-1eb"/>
+                                <segue destination="sv7-Qe-UFQ" kind="presentation" id="SSR-5S-5gK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -94,7 +95,7 @@
         <!--Join Course-->
         <scene sceneID="I0n-LR-AC9">
             <objects>
-                <tableViewController title="Join Course" id="Afv-1N-MMY" customClass="JoinCourseViewController" customModule="Notera" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="joinCourseView" title="Join Course" id="Afv-1N-MMY" customClass="JoinCourseViewController" customModule="Notera" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="xCd-O8-F5I">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,12 +155,14 @@
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cancelToCourseView:" destination="Afv-1N-MMY" id="gEs-pX-6mM"/>
+                                <segue destination="tbo-CB-QtY" kind="unwind" unwindAction="cancelToCourseView:" id="xmh-2b-8k4"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="HTI-l9-BSl">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="joinCourseAndReturn:" destination="Afv-1N-MMY" id="iwo-pT-HF7"/>
+                                <action selector="joinCourse:" destination="Afv-1N-MMY" id="nyX-ED-uTo"/>
+                                <segue destination="tbo-CB-QtY" kind="unwind" identifier="JoinCourse" unwindAction="joinCourse:" id="jbC-Ba-ctW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -169,6 +172,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWO-eP-UHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tbo-CB-QtY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2944" y="-11"/>
         </scene>
@@ -199,7 +203,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTy-VZ-y4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3184" y="794"/>
+            <point key="canvasLocation" x="3040" y="676"/>
         </scene>
         <!--Classmates-->
         <scene sceneID="I65-c6-W1a">
@@ -210,15 +214,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ClassmateRow" rowHeight="80" id="wi1-up-2bk" customClass="ClassmatesTableViewCell" customModule="Notera" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClassmateRow" rowHeight="80" id="wi1-up-2bk" customClass="ClassmatesTableViewCell" customModule="Notera" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="wi1-up-2bk" id="AxB-uw-73F">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="79"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vew-Xs-eQg">
-                                            <rect key="frame" x="18" y="18" width="541" height="50"/>
+                                            <rect key="frame" x="18" y="18" width="574" height="50"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OFN-mV-REr">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -228,16 +232,16 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Ybt-YF-NTi">
-                                                    <rect key="frame" x="60" y="9" width="481" height="32"/>
+                                                    <rect key="frame" x="60" y="9" width="514" height="32"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Classmate Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcT-fO-nL2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="481" height="17"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="514" height="17"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="List of Courses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdZ-Rw-wyt">
-                                                            <rect key="frame" x="0.0" y="17" width="481" height="15"/>
+                                                            <rect key="frame" x="0.0" y="17" width="514" height="15"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -519,7 +523,141 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BfQ-0O-HnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2462" y="794"/>
+            <point key="canvasLocation" x="2352" y="676"/>
+        </scene>
+        <!--Course Feed-->
+        <scene sceneID="FHd-Rb-3a0">
+            <objects>
+                <tableViewController storyboardIdentifier="courseFeedView" id="8Ma-tP-43K" customClass="CourseFeedViewController" customModule="Notera" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Sf-oJ-aSu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedItem" rowHeight="240" id="eWw-2Y-oHt" customClass="FeedPostTableViewCell" customModule="Notera" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="240"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eWw-2Y-oHt" id="FzS-6z-fO8">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="240"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jp6-wO-vpX" customClass="FeedPostView" customModule="Notera" customModuleProvider="target">
+                                            <rect key="frame" x="10" y="10" width="580" height="220"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sSH-0E-KhZ">
+                                                    <rect key="frame" x="10" y="10" width="560" height="200"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bs7-ff-V4p">
+                                                            <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m1d-kS-zPr">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="50" id="GST-V3-GGj"/>
+                                                                        <constraint firstAttribute="height" constant="50" id="xqa-kU-MEq"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="PVV-mA-sxN">
+                                                                    <rect key="frame" x="55" y="6" width="505" height="39"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Common Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MP5-Vs-HlG">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="505" height="22"/>
+                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posting Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcL-Ab-2wm">
+                                                                            <rect key="frame" x="0.0" y="22" width="505" height="17"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="MP5-Vs-HlG" secondAttribute="trailing" id="CZ5-SG-tNz"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="IcL-Ab-2wm" secondAttribute="trailing" id="hT4-xX-FAu"/>
+                                                                    </constraints>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="aQR-j6-0uE"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kwh-c9-0Po" userLabel="Post Text">
+                                                            <rect key="frame" x="0.0" y="50" width="560" height="150"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="sSH-0E-KhZ" secondAttribute="bottom" constant="10" id="6K9-7a-Btz"/>
+                                                <constraint firstItem="sSH-0E-KhZ" firstAttribute="leading" secondItem="jp6-wO-vpX" secondAttribute="leading" constant="10" id="F5b-Rs-eSM"/>
+                                                <constraint firstAttribute="trailing" secondItem="sSH-0E-KhZ" secondAttribute="trailing" constant="10" id="Y9r-tT-SY2"/>
+                                                <constraint firstItem="sSH-0E-KhZ" firstAttribute="top" secondItem="jp6-wO-vpX" secondAttribute="top" constant="10" id="tIx-gW-ebY"/>
+                                            </constraints>
+                                            <connections>
+                                                <outlet property="postText" destination="kwh-c9-0Po" id="QyG-bP-xfS"/>
+                                                <outlet property="postingTime" destination="IcL-Ab-2wm" id="gTn-pL-Pea"/>
+                                                <outlet property="userCommonName" destination="MP5-Vs-HlG" id="qh1-fJ-RC8"/>
+                                                <outlet property="userProfilePicture" destination="m1d-kS-zPr" id="5jD-3l-mtN"/>
+                                            </connections>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="jp6-wO-vpX" secondAttribute="bottom" constant="10" id="EPS-xe-Grh"/>
+                                        <constraint firstAttribute="trailing" secondItem="jp6-wO-vpX" secondAttribute="trailing" constant="10" id="bhU-1F-LHs"/>
+                                        <constraint firstItem="jp6-wO-vpX" firstAttribute="leading" secondItem="FzS-6z-fO8" secondAttribute="leading" constant="10" id="kGA-TO-ViX"/>
+                                        <constraint firstItem="jp6-wO-vpX" firstAttribute="top" secondItem="FzS-6z-fO8" secondAttribute="top" constant="10" id="ykV-lW-RZF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Feed Card Background"/>
+                                <connections>
+                                    <outlet property="feedPostView" destination="jp6-wO-vpX" id="kC1-gw-M6m"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="dataSource" destination="8Ma-tP-43K" id="7UF-LU-XaG"/>
+                            <outlet property="delegate" destination="8Ma-tP-43K" id="x11-X2-cFY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Course Feed" id="rrz-Lr-Hfb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tUx-9r-NA1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3040" y="-697"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sv4-f0-oD1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BiG-RE-L0a" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZxX-SI-yhB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Ma-tP-43K" kind="relationship" relationship="rootViewController" id="hGV-kw-0tZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3f6-Rg-uNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2352" y="-697"/>
         </scene>
     </scenes>
     <resources>

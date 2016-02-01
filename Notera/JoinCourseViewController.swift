@@ -18,15 +18,6 @@ class JoinCourseViewController: UITableViewController, SearchReturnDelegate, Asy
     var selectedSchool: School?
     var selectedCourse: Course?
     
-    @IBAction func cancelToCourseView(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    @IBAction func joinCourseAndReturn(sender: AnyObject) {
-        // do something here to join the course
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let searchView = mainStoryboard.instantiateViewControllerWithIdentifier("searchView") as! SearchViewController

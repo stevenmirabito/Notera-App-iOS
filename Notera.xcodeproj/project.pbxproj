@@ -19,6 +19,8 @@
 		B05659051C5DD6540001C5E0 /* SearchReturnDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05659041C5DD6540001C5E0 /* SearchReturnDelegate.swift */; };
 		B05659091C5EC3100001C5E0 /* AsyncRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05659081C5EC3100001C5E0 /* AsyncRequestDelegate.swift */; };
 		B056590B1C5EF9B20001C5E0 /* SearchItemWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056590A1C5EF9B20001C5E0 /* SearchItemWrapper.swift */; };
+		B056590D1C5F004C0001C5E0 /* CourseFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056590C1C5F004C0001C5E0 /* CourseFeedViewController.swift */; };
+		B056590F1C5F00770001C5E0 /* CourseFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056590E1C5F00770001C5E0 /* CourseFeedManager.swift */; };
 		B080D2281C5D50D100055AD5 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D2271C5D50D100055AD5 /* Note.swift */; };
 		B080D22A1C5D512E00055AD5 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D2291C5D512E00055AD5 /* Student.swift */; };
 		B080D22C1C5D5A7400055AD5 /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080D22B1C5D5A7400055AD5 /* FeedManager.swift */; };
@@ -67,6 +69,8 @@
 		B05659041C5DD6540001C5E0 /* SearchReturnDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchReturnDelegate.swift; sourceTree = "<group>"; };
 		B05659081C5EC3100001C5E0 /* AsyncRequestDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncRequestDelegate.swift; sourceTree = "<group>"; };
 		B056590A1C5EF9B20001C5E0 /* SearchItemWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemWrapper.swift; sourceTree = "<group>"; };
+		B056590C1C5F004C0001C5E0 /* CourseFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseFeedViewController.swift; sourceTree = "<group>"; };
+		B056590E1C5F00770001C5E0 /* CourseFeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseFeedManager.swift; sourceTree = "<group>"; };
 		B080D2271C5D50D100055AD5 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		B080D2291C5D512E00055AD5 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		B080D22B1C5D5A7400055AD5 /* FeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 				B0F390EF1C5C6864000D53B6 /* FeedViewController.swift */,
 				B080D22E1C5D5DDB00055AD5 /* FeedPostView.swift */,
 				B080D2301C5D60BC00055AD5 /* FeedPostTableViewCell.swift */,
+				B056590C1C5F004C0001C5E0 /* CourseFeedViewController.swift */,
 			);
 			name = FeedView;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				B080D2341C5D7EEA00055AD5 /* CoursesManager.swift */,
 				B05658F51C5DA6130001C5E0 /* StudentManager.swift */,
 				B05658FF1C5DCB360001C5E0 /* SchoolManager.swift */,
+				B056590E1C5F00770001C5E0 /* CourseFeedManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -462,7 +468,9 @@
 			files = (
 				B05658FC1C5DC8A90001C5E0 /* JoinCourseViewController.swift in Sources */,
 				B05658F01C5D8BED0001C5E0 /* CoursesTableViewCell.swift in Sources */,
+				B056590F1C5F00770001C5E0 /* CourseFeedManager.swift in Sources */,
 				B05658F21C5DA17C0001C5E0 /* ClassmatesTableViewCell.swift in Sources */,
+				B056590D1C5F004C0001C5E0 /* CourseFeedViewController.swift in Sources */,
 				B05659051C5DD6540001C5E0 /* SearchReturnDelegate.swift in Sources */,
 				B006D6811C5C7A5B003AE1FB /* ClassmatesViewController.swift in Sources */,
 				B0F390F21C5C6864000D53B6 /* CoursesViewController.swift in Sources */,
